@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submission Successful</title>
+
+    <style>
+
+        body{
+            font-family:Arial;
+            background:#f4f4f4;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .box{
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 0 10px rgba(0,0,0,.2);
+            width:400px;
+            text-align:center;
+        }
+
+        h2{
+            color:green;
+        }
+
+        p{
+            font-size:18px;
+        }
+
+        a{
+            display:inline-block;
+            margin-top:20px;
+            text-decoration:none;
+            background:#2563eb;
+            color:white;
+            padding:10px 20px;
+            border-radius:5px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h2>✅ Registration Successful</h2>
+
+<p><strong>Name:</strong> <%= student.name %></p>
+
+<p><strong>Age:</strong> <%= student.age %></p>
+
+<p><strong>Email:</strong> <%= student.email %></p>
+
+<a href="/">Back to Signup</a>
+
+</div>
+
+</body>
+</html>

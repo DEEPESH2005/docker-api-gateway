@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ares Form</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI',sans-serif;
+}
+
+body{
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#0f172a,#1e293b,#2563eb);
+}
+
+.container{
+
+    width:420px;
+    background:white;
+    border-radius:20px;
+    padding:35px;
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+
+}
+
+h1{
+
+    text-align:center;
+    color:#2563eb;
+    margin-bottom:10px;
+
+}
+
+p{
+
+    text-align:center;
+    color:#666;
+    margin-bottom:25px;
+
+}
+
+label{
+
+    display:block;
+    margin-top:15px;
+    margin-bottom:8px;
+    font-weight:600;
+
+}
+
+input{
+
+    width:100%;
+    padding:13px;
+    border-radius:10px;
+    border:2px solid #ddd;
+    outline:none;
+    transition:.3s;
+
+}
+
+input:focus{
+
+    border-color:#2563eb;
+
+}
+
+button{
+
+    width:100%;
+    margin-top:25px;
+    padding:14px;
+    border:none;
+    border-radius:10px;
+    background:#2563eb;
+    color:white;
+    font-size:17px;
+    cursor:pointer;
+    transition:.3s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+    transform:translateY(-2px);
+
+}
+
+.result{
+
+    margin-top:25px;
+    background:#f4f7ff;
+    border-left:5px solid #2563eb;
+    padding:15px;
+    border-radius:10px;
+
+}
+
+pre{
+
+    white-space:pre-wrap;
+
+}
+
+.footer{
+
+    margin-top:20px;
+    text-align:center;
+    color:#888;
+    font-size:13px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🚀 Ares Frontend</h1>
+
+<p>Node.js + Express → Flask Backend</p>
+
+<form action="/submit" method="POST">
+
+<label>Full Name</label>
+
+<input
+type="text"
+name="name"
+placeholder="Enter your name"
+required
+>
+
+<label>Age</label>
+
+<input
+type="number"
+name="age"
+placeholder="Enter your age"
+required
+>
+
+<label>Email</label>
+
+<input
+type="email"
+name="email"
+placeholder="Enter your email"
+required
+>
+
+<button type="submit">
+
+Submit
+
+</button>
+
+</form>
+
+<% if(result){ %>
+
+<div class="result">
+
+<h3>✅ Backend Response</h3>
+
+<pre><%= JSON.stringify(result,null,2) %></pre>
+
+</div>
+
+<% } %>
+
+<div class="footer">
+
+Made with ❤️ using Node.js, Express & Flask
+
+</div>
+
+</div>
+
+</body>
+</html>
